@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><title>Résultats</title></head>
+<body>
+  <h1>Résultats pour élève {{ eleve_id }}</h1>
+  {% for r, note in zip(reponses, notes) %}
+    <p>Question 1 : {{ r.question1 }}</p>
+    <p>Question 2 : {{ r.question2 }}</p>
+    <p>Note : {{ note }}/2</p>
+    <hr>
+  {% endfor %}
+</body>
+</html>

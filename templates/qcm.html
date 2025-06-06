@@ -1,6 +1,33 @@
 <!doctype html>
 <html>
-<head><title>QCM</title></head>
+<head>
+  <meta charset="UTF-8"> <!-- Encodage correct des caractères -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rend le site responsive -->
+  <title>QCM</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: clamp(1rem, 2.5vw, 1.5rem); /* Texte qui s’adapte à la taille de l’écran */
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    form {
+      max-width: 600px;  /* Largeur maximale pour lecture confortable */
+      margin: 0 auto;    /* Centre le formulaire sur la page */
+    }
+
+    input[type="radio"] {
+      margin-right: 10px; /* Espace entre bouton radio et texte */
+    }
+
+    button {
+      font-size: 1em;
+      padding: 0.5em 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
   <h1>QCM - Conjugaison du verbe "finir"</h1>
   <form method="post">
@@ -16,3 +43,4 @@
   </form>
 </body>
 </html>
+

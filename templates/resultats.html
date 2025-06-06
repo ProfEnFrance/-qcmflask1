@@ -2,12 +2,12 @@
 <html>
 <head><title>Résultats</title></head>
 <body>
-  <h1>Résultats pour élève {{ eleve_id }}</h1>
-  {% for r, note in zip(reponses, notes) %}
-    <p>Question 1 : {{ r.question1 }}</p>
-    <p>Question 2 : {{ r.question2 }}</p>
-    <p>Note : {{ note }}/2</p>
-    <hr>
-  {% endfor %}
+<h1>Résultats pour élève {{ eleve_id }}</h1>
+{% for i in range(reponses|length) %}
+<p>Question 1 : {{ reponses[i].question1 }}</p>
+<p>Question 2 : {{ reponses[i].question2 }}</p>
+<p>Note : {{ notes[i] }}/2</p>
+<hr>
+{% endfor %}
 </body>
 </html>

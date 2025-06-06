@@ -1,42 +1,13 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8"> <!-- Encodage correct -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptation aux écrans -->
-  <title>Résultats</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      font-size: clamp(1rem, 2.5vw, 1.5rem); /* Texte fluide */
-      padding: 20px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto; /* Centre le contenu */
-    }
-
-    h1 {
-      font-size: clamp(1.5rem, 5vw, 2.5rem); /* Titre adaptable */
-      margin-bottom: 1em;
-    }
-
-    p {
-      margin: 0.5em 0;
-    }
-
-    hr {
-      margin: 1.5em 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
-  </style>
-</head>
+<head><title>Résultats2</title></head>
 <body>
-  <h1>Résultats pour élève {{ eleve_id }}</h1>
-  {% for i in range(reponses|length) %}
-    <p>Question 1 : {{ reponses[i].question1 }}</p>
-    <p>Question 2 : {{ reponses[i].question2 }}</p>
-    <p>Note : {{ notes[i] }}/2</p>
-    <hr>
-  {% endfor %}
+<h1>Résultats pour élève {{ eleve_id }}</h1>
+{% for i in range(reponses|length) %}
+<p>Question 1 : {{ reponses[i].question1 }}</p>
+<p>Question 2 : {{ reponses[i].question2 }}</p>
+<p>Note : {{ notes[i] }}/2</p>
+<hr>
+{% endfor %}
 </body>
 </html>

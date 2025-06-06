@@ -1,6 +1,35 @@
 <!doctype html>
 <html>
-<head><title>Résultats2</title></head>
+<head>
+    <title>Résultats2</title>
+    <style>
+        /* Utilisation d'unités relatives pour le texte */
+        h1 {
+            font-size: 5vw; /* Taille proportionnelle à la largeur de l'écran */
+        }
+        p {
+            font-size: 3vw; /* Taille proportionnelle pour les paragraphes */
+        }
+        /* Ajustement pour petits écrans (smartphones) */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 6vw; /* Légèrement plus grand sur petits écrans */
+            }
+            p {
+                font-size: 4vw;
+            }
+        }
+        /* Ajustement pour grands écrans (ordinateurs) */
+        @media screen and (min-width: 1200px) {
+            h1 {
+                font-size: 4vw; /* Légèrement plus petit sur grands écrans */
+            }
+            p {
+                font-size: 2vw;
+            }
+        }
+    </style>
+</head>
 <body>
 <h1>Résultats pour élève {{ eleve_id }}</h1>
 {% for i in range(reponses|length) %}
